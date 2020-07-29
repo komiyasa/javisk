@@ -9,13 +9,10 @@ namespace KomiyasaWebApp.Pages
 {
     public class TextAnalyticsModel : PageModel
     {
-        //Text Analytics で処理をするプロパティを
-        public string inputText { get; set; }
-        public int Answer { get; set; }
-
-        public IActionResult OnGet()
+        public void OnGet()
         {
-            return Page();
+            string dateTime = DateTime.Now.ToShortDateString();
+            ViewData["TimeStamp"] = dateTime;
         }
     }
 }
